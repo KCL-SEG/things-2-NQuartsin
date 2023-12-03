@@ -18,6 +18,6 @@ class ThingForm(forms.ModelForm):
     # The form must accept valid inputs for Thing and reject invalid input for Thing.
     # name must be between 1 and 35 characters long and must be unique
     name = forms.CharField(min_length=1, max_length=35,) 
-    description = forms.CharField(max_length=120, required=False)
+    description = forms.CharField(max_length=120)
     quantity = forms.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(50)]) 
 

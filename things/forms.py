@@ -15,6 +15,5 @@ class ThingForm(forms.ModelForm):
         }
     
     name = forms.CharField(min_length=1, max_length=35) 
-    description = forms.CharField(max_length=120)
     quantity = forms.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(50)]) 
 
